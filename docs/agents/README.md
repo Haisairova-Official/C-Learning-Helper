@@ -1,8 +1,10 @@
 # 多 Agent 开发任务入口
 
-更新日期：2026-11-06
+更新日期：2026-11-07
 
 当前阶段：管理扩展、Tino、输出格式提示、作业参数编辑与聊天室头像已完成本机验证。最新状态见 [RUN_STATUS.md](RUN_STATUS.md)，下次入口 [NEXT_SESSION.md](../NEXT_SESSION.md)，本轮验收 [ITERATION_02.md](../ITERATION_02.md)。初步成品已完成本机联调。A/B/D 已完成并交接，主 Agent 已完成 C 的第二轮接入、整体联调、非法操作测试及随后提供的 DeepSeek 真实 AI 接入。学校私有部署、正式 MariaDB 与 Rocky 8 验收仍待对应环境。试用方式见 [项目首页](../../README.md)，结果见 [初版验收](../INITIAL_RELEASE.md)；调度见 [RUN_STATUS.md](RUN_STATUS.md)，各模块遗留项见对应交接文件。
+
+GitHub仓库已建立：[C-Learning-Helper](https://github.com/Haisairova-Official/C-Learning-Helper)（私有，main，AGPLv3）。首次入库与敏感信息排除记录见 [GitHub交接](../implementation/A/GITHUB_REPOSITORY.md)。
 
 ## 分工
 

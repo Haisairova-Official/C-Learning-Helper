@@ -217,6 +217,8 @@ B、C 负责各自业务代码，D 负责 frontend/。公共依赖变更由对�
 - 已恢复原合成作者的头像与资料、作业开关，逐项比较既有消息内容一致。未发送聊天消息、创建账号、调用AI或运行学生程序。
 - 无剩余后端部署项。主 Agent进行有图/无图浏览器验收，更新公共契约；正式MariaDB/Rocky8与生产环境验收仍独立记录。
 
-## 2026-11-07 主 Agent：GitHub 首次入库（进行中）
+## 2026-11-07 主 Agent：GitHub 首次入库（完成）
 
 按用户要求新建C-Learning-Helper仓库，AGPLv3。当前无Git历史；采用已登录账号下私有仓库，检查全量源码/文档/配置与密钥排除后初始化main并推送，不重启服务。详细过程见 [GITHUB_REPOSITORY.md](../implementation/A/GITHUB_REPOSITORY.md)。
+
+GitHub已创建私有仓库Haisairova-Official/C-Learning-Helper并推送main。294文件远端树与本地逐blob一致，GitHub识别AGPLv3，敏感值扫描无命中。首次提交ba315a5；交接更新另行提交。不影响现有服务。

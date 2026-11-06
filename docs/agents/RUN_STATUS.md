@@ -99,3 +99,7 @@
 - 用户咨询20路同时编译，当前保持2路完整评测任务+数据库队列，未擅自改为20。正式MariaDB、Rocky8、学校模型与目标机容量压测仍待相应环境。
 
 专项入口：[管理](../implementation/A/USER_MANAGEMENT.md)、[Tino](../implementation/C/TINO.md)、[作答布局](../implementation/D/WORKSPACE_AI.md)、[格式](../implementation/B/OUTPUT_FORMAT.md)、[作业编辑](../implementation/A/ASSIGNMENT_EDIT.md)、[头像](../implementation/D/CHAT_AVATARS.md)、[稳定性](../implementation/A/SERVICE_STABILITY.md)。
+
+## 2026-11-07：GitHub首次全量同步完成
+
+私有仓库 [C-Learning-Helper](https://github.com/Haisairova-Official/C-Learning-Helper) 已建立，294文件推送main并逐blob核对一致；AGPLv3正式文本及元数据已识别。root忽略规则排除真实配置/数据库/日志/依赖/构建产物，敏感值扫描无命中。本轮未重启服务。交接见A/GITHUB_REPOSITORY.md。

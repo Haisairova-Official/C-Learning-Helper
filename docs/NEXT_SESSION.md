@@ -1,6 +1,10 @@
 # 下次继续入口
 
-更新时间：2026-11-06。管理扩展、Tino人格、作答布局、输出格式反馈及作业参数编辑已完成本机验证；聊天室头像也已完成本机验证。页面只保留教学操作所需内容，开发说明写入MD。
+更新时间：2026-11-07。管理扩展、Tino人格、作答布局、输出格式反馈及作业参数编辑已完成本机验证；聊天室头像也已完成本机验证。页面只保留教学操作所需内容，开发说明写入MD。
+
+## GitHub仓库
+
+已完整同步至 [Haisairova-Official/C-Learning-Helper](https://github.com/Haisairova-Official/C-Learning-Helper)，私有，main，AGPLv3。源码与交接均入库；密钥、本机数据库、日志及构建缓存通过忽略规则保留本机。详见 [首次入库](implementation/A/GITHUB_REPOSITORY.md)。
 
 ## 最新追加：80 端口已启用
 
