@@ -1,0 +1,12 @@
+# Local demonstration only. Production remains MariaDB and requires explicit accounts.
+app:
+  demo:
+    enabled: true
+cassist:
+  ai:
+    mode: ${AI_MODE:mock}
+server:
+  servlet:
+    session:
+      cookie:
+        secure: false

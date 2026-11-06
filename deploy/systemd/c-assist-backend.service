@@ -1,0 +1,25 @@
+[Unit]
+Description=C language teaching assistant backend
+After=network-online.target mariadb.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=cassist
+Group=cassist
+WorkingDirectory=/opt/c-assist/backend
+EnvironmentFile=/etc/c-assist/backend.env
+ExecStart=/usr/bin/java -Duser.timezone=UTC -jar /opt/c-assist/backend/c-assist-backend.jar
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+SuccessExitStatus=143
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/c-assist
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

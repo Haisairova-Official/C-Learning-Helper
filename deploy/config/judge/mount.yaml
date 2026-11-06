@@ -1,0 +1,44 @@
+# Template only. Build and verify a dedicated Rocky 8 compiler rootfs before use.
+# No business, database, AI credential or host home directories are mounted.
+mount:
+  - type: bind
+    source: /var/lib/c-assist-judge/rootfs/usr
+    target: /usr
+    readonly: true
+  - type: bind
+    source: /var/lib/c-assist-judge/rootfs/bin
+    target: /bin
+    readonly: true
+  - type: bind
+    source: /var/lib/c-assist-judge/rootfs/lib
+    target: /lib
+    readonly: true
+  - type: bind
+    source: /var/lib/c-assist-judge/rootfs/lib64
+    target: /lib64
+    readonly: true
+  - type: bind
+    source: /var/lib/c-assist-judge/rootfs/etc/ld.so.cache
+    target: /etc/ld.so.cache
+    readonly: true
+  - type: bind
+    source: /dev/null
+    target: /dev/null
+  - type: bind
+    source: /dev/zero
+    target: /dev/zero
+  - type: bind
+    source: /dev/urandom
+    target: /dev/urandom
+  - type: tmpfs
+    target: /w
+    data: size=64m,nr_inodes=4k
+  - type: tmpfs
+    target: /tmp
+    data: size=64m,nr_inodes=4k
+proc: true
+workDir: /w
+hostName: c-assist-judge
+# Reserved sandbox identity; confirm it does not belong to a host account.
+uid: 20000
+gid: 20000

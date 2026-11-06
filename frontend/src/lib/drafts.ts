@@ -1,0 +1,4 @@
+export const draftKey = (userId: string, assignmentId: string, versionId: string) => `cassist:draft:${encodeURIComponent(userId)}:${encodeURIComponent(assignmentId)}:${encodeURIComponent(versionId)}`;
+export function readDraft(userId: string, assignmentId: string, versionId: string): string | null { try { return sessionStorage.getItem(draftKey(userId, assignmentId, versionId)); } catch { return null; } }
+export function saveDraft(userId: string, assignmentId: string, versionId: string, code: string): boolean { try { sessionStorage.setItem(draftKey(userId, assignmentId, versionId), code); return true; } catch { return false; } }
+export function clearDrafts(userId: string) { try { const prefix = `cassist:draft:${encodeURIComponent(userId)}:`; Object.keys(sessionStorage).filter(k => k.startsWith(prefix)).forEach(k => sessionStorage.removeItem(k)); } catch { /* Storage may be disabled. */ } }

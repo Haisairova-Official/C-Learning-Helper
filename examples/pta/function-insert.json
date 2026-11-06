@@ -1,0 +1,213 @@
+{
+  "schemaVersion": "cassist.teacher-problems.v1",
+  "title": "实验1-1 递减数组的无重复插入：双语言函数题样例",
+  "source": {
+    "kind": "independent-adaptation",
+    "blueprint": "docs/implementation/C/PTA_BLUEPRINT.md",
+    "note": "仅参考题意蓝本；题面措辞、接口、参考答案、评测模板及全部测试数据均独立编写，不是 PTA 原题或隐藏用例导出。"
+  },
+  "problems": [
+    {
+      "title": "实验1-1 递减数组的无重复插入（C17 / 指针与结构体）",
+      "statement": "给定一个按严格递减顺序保存、没有重复元素的整数序列，以及序列允许的最大容量，请实现 insert_descending，将新整数插入适当位置。成功后仍须严格递减且无重复元素。\n\n若当前长度已达到容量，或者待插入值已存在，则插入失败，序列内容与长度都必须保持原状。容量为零时不能插入；空序列在容量大于零时可以插入。输入保证原序列合法。\n\n这是函数题：仅提交给定函数的实现，不编写 main，不自行读取或输出数据，不在提交中重复定义已提供的数据结构。评测程序会准备参数、调用函数并打印结果。序列元素与插入值均在有符号32位整数范围内，容量范围为0至128。\n\n完成后可自行分析最好/最坏情况下的时间复杂度与额外空间需求。",
+      "inputDescription": "评测数据第一行是容量 capacity 与当前长度 n；第二行是 n 个严格递减的整数（n=0 时该行为空）；第三行是待插入值。函数提交无需读取输入。",
+      "outputDescription": "评测程序第一行输出 OK 或 FAIL 和调用后的长度，以一个空格分隔；第二行按当前顺序输出元素，以单个空格分隔，不留尾随空格。空序列第二行为空行；每行末尾均有换行。函数提交无需输出。",
+      "samples": [
+        {
+          "input": "5 3\n9 5 1\n7\n",
+          "output": "OK 4\n9 7 5 1\n",
+          "explanation": "7 插入到 9 和 5 之间，成功后长度为 4。"
+        },
+        {
+          "input": "5 3\n9 5 1\n5\n",
+          "output": "FAIL 3\n9 5 1\n",
+          "explanation": "5 已存在，插入失败，长度与原有元素保持不变。"
+        }
+      ],
+      "timeLimitMs": 400,
+      "memoryLimitMb": 64,
+      "codeLimitBytes": 16384,
+      "maxScore": 20,
+      "referenceAnswer": "int insert_descending(OrderedArray *list, int value)\n{\n    if (list->size >= list->capacity) {\n        return 0;\n    }\n    int position = 0;\n    while (position < list->size && list->data[position] > value) {\n        ++position;\n    }\n    if (position < list->size && list->data[position] == value) {\n        return 0;\n    }\n    for (int i = list->size; i > position; --i) {\n        list->data[i] = list->data[i - 1];\n    }\n    list->data[position] = value;\n    ++list->size;\n    return 1;\n}\n",
+      "testCases": [
+        {
+          "input": "4 0\n\n7\n",
+          "expectedOutput": "OK 1\n7\n",
+          "visibility": "HIDDEN",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        },
+        {
+          "input": "0 0\n\n7\n",
+          "expectedOutput": "FAIL 0\n\n",
+          "visibility": "HIDDEN",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        },
+        {
+          "input": "5 3\n9 5 1\n12\n",
+          "expectedOutput": "OK 4\n12 9 5 1\n",
+          "visibility": "HIDDEN",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        },
+        {
+          "input": "5 3\n9 5 1\n7\n",
+          "expectedOutput": "OK 4\n9 7 5 1\n",
+          "visibility": "PUBLIC",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        },
+        {
+          "input": "5 3\n9 5 1\n-2\n",
+          "expectedOutput": "OK 4\n9 5 1 -2\n",
+          "visibility": "HIDDEN",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        },
+        {
+          "input": "5 3\n9 5 1\n5\n",
+          "expectedOutput": "FAIL 3\n9 5 1\n",
+          "visibility": "PUBLIC",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        },
+        {
+          "input": "3 3\n9 5 1\n7\n",
+          "expectedOutput": "FAIL 3\n9 5 1\n",
+          "visibility": "HIDDEN",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        },
+        {
+          "input": "5 3\n-1 -5 -9\n-6\n",
+          "expectedOutput": "OK 4\n-1 -5 -6 -9\n",
+          "visibility": "HIDDEN",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        },
+        {
+          "input": "4 3\n10 0 -2147483648\n2147483647\n",
+          "expectedOutput": "OK 4\n2147483647 10 0 -2147483648\n",
+          "visibility": "HIDDEN",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        },
+        {
+          "input": "4 3\n2147483647 0 -10\n-2147483648\n",
+          "expectedOutput": "OK 4\n2147483647 0 -10 -2147483648\n",
+          "visibility": "HIDDEN",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        }
+      ],
+      "state": "DRAFT",
+      "problemType": "FUNCTION",
+      "language": "C17",
+      "functionSignature": "#define ORDERED_CAPACITY 128\ntypedef struct {\n    int data[ORDERED_CAPACITY];\n    int size;\n    int capacity;\n} OrderedArray;\n\n/* 插入成功返回 1，失败返回 0。list 指向有效对象。\n   失败时不得改变 size、capacity 或已有元素；成功时 capacity 不变。 */\nint insert_descending(OrderedArray *list, int value);\n",
+      "starterCode": "int insert_descending(OrderedArray *list, int value)\n{\n    /* TODO：补全函数；OrderedArray 已由评测程序定义。 */\n    return 0;\n}\n",
+      "judgeTemplate": "#include <stdio.h>\n\n#define ORDERED_CAPACITY 128\ntypedef struct {\n    int data[ORDERED_CAPACITY];\n    int size;\n    int capacity;\n} OrderedArray;\n\n/*__STUDENT_CODE__*/\n\nint main(void)\n{\n    OrderedArray list = {0};\n    int value;\n    if (scanf(\"%d%d\", &list.capacity, &list.size) != 2) return 2;\n    if (list.capacity < 0 || list.capacity > ORDERED_CAPACITY ||\n        list.size < 0 || list.size > list.capacity) return 2;\n    for (int i = 0; i < list.size; ++i) {\n        if (scanf(\"%d\", &list.data[i]) != 1) return 2;\n    }\n    if (scanf(\"%d\", &value) != 1) return 2;\n    int original_capacity = list.capacity;\n    int ok = insert_descending(&list, value);\n    if ((ok != 0 && ok != 1) || list.capacity != original_capacity ||\n        list.size < 0 || list.size > original_capacity) {\n        puts(\"INVALID_STATE\");\n        return 0;\n    }\n    printf(\"%s %d\\n\", ok ? \"OK\" : \"FAIL\", list.size);\n    for (int i = 0; i < list.size; ++i) {\n        if (i) putchar(' ');\n        printf(\"%d\", list.data[i]);\n    }\n    putchar('\\n');\n    return 0;\n}\n"
+    },
+    {
+      "title": "实验1-1 递减数组的无重复插入（C++17 / 引用与 vector）",
+      "statement": "给定一个按严格递减顺序保存、没有重复元素的整数序列，以及序列允许的最大容量，请实现 insert_descending，将新整数插入适当位置。成功后仍须严格递减且无重复元素。\n\n若当前长度已达到容量，或者待插入值已存在，则插入失败，序列内容与长度都必须保持原状。容量为零时不能插入；空序列在容量大于零时可以插入。输入保证原序列合法。\n\n这是函数题：仅提交给定函数的实现，不编写 main，不自行读取或输出数据，不在提交中重复定义已提供的数据结构。评测程序会准备参数、调用函数并打印结果。序列元素与插入值均在有符号32位整数范围内，容量范围为0至128。\n\n完成后可自行分析最好/最坏情况下的时间复杂度与额外空间需求。",
+      "inputDescription": "评测数据第一行是容量 capacity 与当前长度 n；第二行是 n 个严格递减的整数（n=0 时该行为空）；第三行是待插入值。函数提交无需读取输入。",
+      "outputDescription": "评测程序第一行输出 OK 或 FAIL 和调用后的长度，以一个空格分隔；第二行按当前顺序输出元素，以单个空格分隔，不留尾随空格。空序列第二行为空行；每行末尾均有换行。函数提交无需输出。",
+      "samples": [
+        {
+          "input": "5 3\n9 5 1\n7\n",
+          "output": "OK 4\n9 7 5 1\n",
+          "explanation": "7 插入到 9 和 5 之间，成功后长度为 4。"
+        },
+        {
+          "input": "5 3\n9 5 1\n5\n",
+          "output": "FAIL 3\n9 5 1\n",
+          "explanation": "5 已存在，插入失败，长度与原有元素保持不变。"
+        }
+      ],
+      "timeLimitMs": 400,
+      "memoryLimitMb": 64,
+      "codeLimitBytes": 16384,
+      "maxScore": 20,
+      "referenceAnswer": "bool insert_descending(std::vector<int>& values, int capacity, int value)\n{\n    if (values.size() >= static_cast<std::size_t>(capacity)) {\n        return false;\n    }\n    std::size_t position = 0;\n    while (position < values.size() && values[position] > value) {\n        ++position;\n    }\n    if (position < values.size() && values[position] == value) {\n        return false;\n    }\n    values.insert(values.begin() + static_cast<std::ptrdiff_t>(position), value);\n    return true;\n}\n",
+      "testCases": [
+        {
+          "input": "4 0\n\n7\n",
+          "expectedOutput": "OK 1\n7\n",
+          "visibility": "HIDDEN",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        },
+        {
+          "input": "0 0\n\n7\n",
+          "expectedOutput": "FAIL 0\n\n",
+          "visibility": "HIDDEN",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        },
+        {
+          "input": "5 3\n9 5 1\n12\n",
+          "expectedOutput": "OK 4\n12 9 5 1\n",
+          "visibility": "HIDDEN",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        },
+        {
+          "input": "5 3\n9 5 1\n7\n",
+          "expectedOutput": "OK 4\n9 7 5 1\n",
+          "visibility": "PUBLIC",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        },
+        {
+          "input": "5 3\n9 5 1\n-2\n",
+          "expectedOutput": "OK 4\n9 5 1 -2\n",
+          "visibility": "HIDDEN",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        },
+        {
+          "input": "5 3\n9 5 1\n5\n",
+          "expectedOutput": "FAIL 3\n9 5 1\n",
+          "visibility": "PUBLIC",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        },
+        {
+          "input": "3 3\n9 5 1\n7\n",
+          "expectedOutput": "FAIL 3\n9 5 1\n",
+          "visibility": "HIDDEN",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        },
+        {
+          "input": "5 3\n-1 -5 -9\n-6\n",
+          "expectedOutput": "OK 4\n-1 -5 -6 -9\n",
+          "visibility": "HIDDEN",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        },
+        {
+          "input": "4 3\n10 0 -2147483648\n2147483647\n",
+          "expectedOutput": "OK 4\n2147483647 10 0 -2147483648\n",
+          "visibility": "HIDDEN",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        },
+        {
+          "input": "4 3\n2147483647 0 -10\n-2147483648\n",
+          "expectedOutput": "OK 4\n2147483647 0 -10 -2147483648\n",
+          "visibility": "HIDDEN",
+          "score": 2,
+          "comparisonMode": "EXACT"
+        }
+      ],
+      "state": "DRAFT",
+      "problemType": "FUNCTION",
+      "language": "CPP17",
+      "functionSignature": "#include <vector>\n\n/* 插入成功返回 true，失败返回 false；失败时 values 完全不变。\n   capacity 是题目规定的最大元素数，不是 vector::capacity()。 */\nbool insert_descending(std::vector<int>& values, int capacity, int value);\n",
+      "starterCode": "bool insert_descending(std::vector<int>& values, int capacity, int value)\n{\n    // TODO：补全函数；std::vector 已由评测程序引入。\n    return false;\n}\n",
+      "judgeTemplate": "#include <cstddef>\n#include <iostream>\n#include <vector>\n\n/*__STUDENT_CODE__*/\n\nint main()\n{\n    int capacity, length, value;\n    if (!(std::cin >> capacity >> length)) return 2;\n    if (capacity < 0 || capacity > 128 || length < 0 || length > capacity) return 2;\n    std::vector<int> values(static_cast<std::size_t>(length));\n    for (int& item : values) {\n        if (!(std::cin >> item)) return 2;\n    }\n    if (!(std::cin >> value)) return 2;\n    bool ok = insert_descending(values, capacity, value);\n    if (values.size() > static_cast<std::size_t>(capacity)) {\n        std::cout << \"INVALID_STATE\\n\";\n        return 0;\n    }\n    std::cout << (ok ? \"OK\" : \"FAIL\") << ' ' << values.size() << '\\n';\n    for (std::size_t i = 0; i < values.size(); ++i) {\n        if (i) std::cout << ' ';\n        std::cout << values[i];\n    }\n    std::cout << '\\n';\n    return 0;\n}\n"
+    }
+  ]
+}

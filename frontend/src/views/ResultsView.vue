@@ -1,0 +1,14 @@
+<script setup lang="ts">
+import { computed, onMounted, ref } from 'vue';
+import { api } from '../api';
+import type { Assignment, ResultRow } from '../api/types';
+import AsyncState from '../components/AsyncState.vue';
+const assignments = ref<Assignment[]>([]); const selected = ref(''); const rows = ref<ResultRow[]>([]); const loading = ref(true); const error = ref('');
+const average = computed(() => rows.value.length ? (rows.value.reduce((n, r) => n + r.score, 0) / rows.value.length).toFixed(1) : '—');
+const completed = computed(() => rows.value.filter(r => r.completedCount === r.totalCount && r.totalCount > 0).length);
+let resultRequest = 0;
+async function loadResults() { const token = ++resultRequest; const assignmentId = selected.value; loading.value = true; error.value = ''; try { const items = assignmentId ? (await api.results(assignmentId)).items : []; if (token === resultRequest) rows.value = items; } catch (e) { if (token === resultRequest) error.value = (e as Error).message; } finally { if (token === resultRequest) loading.value = false; } }
+async function load() { loading.value = true; error.value = ''; try { assignments.value = (await api.teacherAssignments()).items; selected.value = assignments.value[0]?.id ?? ''; await loadResults(); } catch (e) { error.value = (e as Error).message; loading.value = false; } }
+onMounted(load);
+</script>
+<template><div class="page"><div class="page-heading"><div><h1>学习情况</h1></div><el-select v-model="selected" placeholder="选择作业" style="width:280px" @change="loadResults"><el-option v-for="a in assignments" :key="a.id" :label="a.title" :value="a.id" /></el-select></div><div class="stats-strip"><div><span>班级学生</span><strong>{{ rows.length }}<small>人</small></strong></div><div><span>全部完成</span><strong>{{ completed }}<small>人</small></strong></div><div><span>平均得分</span><strong>{{ average }}<small>分</small></strong></div><div class="stats-note"><p>每题计最高得分<br><small>以截止前受理的提交为准</small></p></div></div><div class="section-bar"><h2>学生完成情况</h2></div><AsyncState :loading="loading" :error="error" :empty="!rows.length" empty-text="暂无成绩数据。" @retry="load"><div class="panel table-panel"><el-table :data="rows"><el-table-column prop="name" label="学生" min-width="180" /><el-table-column label="完成进度" min-width="220"><template #default="{ row }"><el-progress :percentage="row.totalCount ? Math.round(row.completedCount / row.totalCount * 100) : 0" :stroke-width="6" /></template></el-table-column><el-table-column label="已完成" width="130"><template #default="{ row }">{{ row.completedCount }} / {{ row.totalCount }} 题</template></el-table-column><el-table-column label="成绩" width="130"><template #default="{ row }"><strong>{{ row.score }}</strong> / {{ row.maxScore }}</template></el-table-column></el-table></div></AsyncState></div></template>

@@ -1,0 +1,1346 @@
+[
+  {
+    "type": 6,
+    "label": "实验1-1",
+    "title": "有序数组的插入（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049728"
+  },
+  {
+    "type": 6,
+    "label": "实验2-1",
+    "title": "求链式线性表的倒数第 m 项（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049729"
+  },
+  {
+    "type": 6,
+    "label": "实验2-3",
+    "title": "线性表元素的区间删除（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049730"
+  },
+  {
+    "type": 6,
+    "label": "实验2-4",
+    "title": "单链表分段逆转（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049731"
+  },
+  {
+    "type": 6,
+    "label": "实验2-5",
+    "title": "约瑟夫问题（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049732"
+  },
+  {
+    "type": 6,
+    "label": "实验2-6",
+    "title": "判断两个广义表是否相等（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049733"
+  },
+  {
+    "type": 6,
+    "label": "实验3-1",
+    "title": "在一个数组中实现两个栈（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049734"
+  },
+  {
+    "type": 6,
+    "label": "实验3-5",
+    "title": "双端队列（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049735"
+  },
+  {
+    "type": 6,
+    "label": "实验5-2",
+    "title": "树的宽度（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049736"
+  },
+  {
+    "type": 6,
+    "label": "实验5-3",
+    "title": "二叉树直径（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049737"
+  },
+  {
+    "type": 6,
+    "label": "实验6-5",
+    "title": "对顶堆维护中位数（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049738"
+  },
+  {
+    "type": 6,
+    "label": "实验7-4",
+    "title": "是否有回路（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049739"
+  },
+  {
+    "type": 6,
+    "label": "实验10-1",
+    "title": "分类排序（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049740"
+  },
+  {
+    "type": 6,
+    "label": "实验15-1~2",
+    "title": "0-1背包问题（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049741"
+  },
+  {
+    "type": 6,
+    "label": "练习1-1",
+    "title": "二分查找（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049742"
+  },
+  {
+    "type": 6,
+    "label": "练习2-1",
+    "title": "带空头结点的单链表操作（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049743"
+  },
+  {
+    "type": 6,
+    "label": "练习3-1",
+    "title": "仅有头指针的队列（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049744"
+  },
+  {
+    "type": 6,
+    "label": "练习5-1",
+    "title": "顺序存储的二叉树的遍历（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049745"
+  },
+  {
+    "type": 6,
+    "label": "练习5-4",
+    "title": "转换树的表示法（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049746"
+  },
+  {
+    "type": 6,
+    "label": "练习7-2",
+    "title": "判断有向图中两点是否连通（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049747"
+  },
+  {
+    "type": 6,
+    "label": "练习7-3",
+    "title": "判断广度优先遍历序列（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049748"
+  },
+  {
+    "type": 6,
+    "label": "练习10-2",
+    "title": "正负数分类（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049749"
+  },
+  {
+    "type": 6,
+    "label": "练习11-2",
+    "title": "是否二叉查找树（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049750"
+  },
+  {
+    "type": 6,
+    "label": "练习14-1",
+    "title": "B+树的查找（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049751"
+  },
+  {
+    "type": 6,
+    "label": "练习15-1",
+    "title": "分书问题（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049752"
+  },
+  {
+    "type": 6,
+    "label": "练习15-2",
+    "title": "n皇后问题（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049753"
+  },
+  {
+    "type": 6,
+    "label": "练习15-3",
+    "title": "旅行商问题（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049754"
+  },
+  {
+    "type": 6,
+    "label": "练习15-4",
+    "title": "最长公共子序列（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049755"
+  },
+  {
+    "type": 6,
+    "label": "练习15-5",
+    "title": "带权的活动安排问题（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049756"
+  },
+  {
+    "type": 6,
+    "label": "练习15-6",
+    "title": "教室安排问题（C++版）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/6?problemSetProblemId=1927228279999049757"
+  },
+  {
+    "type": 7,
+    "label": "算法0-0",
+    "title": "求两个正整数的最大公约数",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049758"
+  },
+  {
+    "type": 7,
+    "label": "算法1-1~2",
+    "title": "求数组与整数乘积的最大值",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049759"
+  },
+  {
+    "type": 7,
+    "label": "算法1-3~4",
+    "title": "将数组中元素反转存放",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049760"
+  },
+  {
+    "type": 7,
+    "label": "算法1-5",
+    "title": "计算1~n平方的和加上1~n的和",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049761"
+  },
+  {
+    "type": 7,
+    "label": "算法1-6",
+    "title": "计算1~n与1~m每一项相互乘积的和",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049762"
+  },
+  {
+    "type": 7,
+    "label": "算法1-7~9",
+    "title": "连续子序列最大和",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049763"
+  },
+  {
+    "type": 7,
+    "label": "算法1-10~11",
+    "title": "输出 1 ~ n",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049764"
+  },
+  {
+    "type": 7,
+    "label": "练习1-2",
+    "title": "两枚硬币",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049765"
+  },
+  {
+    "type": 7,
+    "label": "实验1-2",
+    "title": "爆气球",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049766"
+  },
+  {
+    "type": 7,
+    "label": "算法2-1",
+    "title": "在顺序表 list 中查找元素 x",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049767"
+  },
+  {
+    "type": 7,
+    "label": "算法2-2",
+    "title": "在顺序表 list 的第 i 个位置上插入元素 x",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049768"
+  },
+  {
+    "type": 7,
+    "label": "算法2-3",
+    "title": "从顺序表 list 中删除第 i 个元素",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049769"
+  },
+  {
+    "type": 7,
+    "label": "算法2-4",
+    "title": "求单链表list中的元素个数，即表长",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049770"
+  },
+  {
+    "type": 7,
+    "label": "算法2-5",
+    "title": "返回单链表 list 中第 i 个元素值",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049771"
+  },
+  {
+    "type": 7,
+    "label": "算法2-6",
+    "title": "在单链表 list 中查找元素 x 所在结点",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049772"
+  },
+  {
+    "type": 7,
+    "label": "算法2-7",
+    "title": "在单链表 list 的第 i 个位置上插入元素 x",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049773"
+  },
+  {
+    "type": 7,
+    "label": "算法2-8",
+    "title": "从单链表 list 中删除第 i 个元素",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049774"
+  },
+  {
+    "type": 7,
+    "label": "算法2-9",
+    "title": "一元多项式加法运算",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049775"
+  },
+  {
+    "type": 7,
+    "label": "算法2-10",
+    "title": "大整数相加运算",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049776"
+  },
+  {
+    "type": 7,
+    "label": "算法2-11",
+    "title": "大整数相乘运算",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049777"
+  },
+  {
+    "type": 7,
+    "label": "练习2-2",
+    "title": "线性表循环右移",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049778"
+  },
+  {
+    "type": 7,
+    "label": "练习2-3",
+    "title": "一元多项式求导",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049779"
+  },
+  {
+    "type": 7,
+    "label": "练习2-4",
+    "title": "最长连续递增子序列",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049780"
+  },
+  {
+    "type": 7,
+    "label": "实验2-2",
+    "title": "一元多项式的乘法运算",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049781"
+  },
+  {
+    "type": 7,
+    "label": "算法3-1~3",
+    "title": "顺序栈的3个操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049782"
+  },
+  {
+    "type": 7,
+    "label": "算法3-4~6",
+    "title": "链式栈的3个操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049783"
+  },
+  {
+    "type": 7,
+    "label": "算法3-7~9",
+    "title": "顺序队列的3个操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049784"
+  },
+  {
+    "type": 7,
+    "label": "算法3-10~12",
+    "title": "链式队列的3个操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049785"
+  },
+  {
+    "type": 7,
+    "label": "算法3-13",
+    "title": "后缀表达式求值",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049786"
+  },
+  {
+    "type": 7,
+    "label": "算法3-14",
+    "title": "阶乘的递归实现",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049787"
+  },
+  {
+    "type": 7,
+    "label": "算法3-15",
+    "title": "车厢重排",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049788"
+  },
+  {
+    "type": 7,
+    "label": "练习3-2",
+    "title": "栈操作的合法性",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049789"
+  },
+  {
+    "type": 7,
+    "label": "练习3-3",
+    "title": "用两个栈实现队列",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049790"
+  },
+  {
+    "type": 7,
+    "label": "练习3-4",
+    "title": "符号配对",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049791"
+  },
+  {
+    "type": 7,
+    "label": "实验3-2",
+    "title": "出栈序列的合法性",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049792"
+  },
+  {
+    "type": 7,
+    "label": "实验3-3",
+    "title": "简单计算器",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049793"
+  },
+  {
+    "type": 7,
+    "label": "实验3-4",
+    "title": "取行李",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049794"
+  },
+  {
+    "type": 7,
+    "label": "实验3-6",
+    "title": "滑动窗口的极值",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049795"
+  },
+  {
+    "type": 7,
+    "label": "算法4-1",
+    "title": "字符串插入操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049796"
+  },
+  {
+    "type": 7,
+    "label": "算法4-2&7",
+    "title": "字符串删除操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049797"
+  },
+  {
+    "type": 7,
+    "label": "算法4-3&8",
+    "title": "字符串截取子串操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049798"
+  },
+  {
+    "type": 7,
+    "label": "算法4-4",
+    "title": "字符串连接操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049799"
+  },
+  {
+    "type": 7,
+    "label": "算法4-5&10",
+    "title": "字符串比较操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049800"
+  },
+  {
+    "type": 7,
+    "label": "算法4-6",
+    "title": "字符串插入操作（不限长）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049801"
+  },
+  {
+    "type": 7,
+    "label": "算法4-9",
+    "title": "字符串连接操作（不限长）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049802"
+  },
+  {
+    "type": 7,
+    "label": "算法4-11&13~16",
+    "title": "字符串匹配算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049803"
+  },
+  {
+    "type": 7,
+    "label": "算法4-12",
+    "title": "字符串替换算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049804"
+  },
+  {
+    "type": 7,
+    "label": "练习4-1",
+    "title": "字符串匹配算法比较",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049805"
+  },
+  {
+    "type": 7,
+    "label": "练习4-2",
+    "title": "剪切粘贴",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049806"
+  },
+  {
+    "type": 7,
+    "label": "实验4-1",
+    "title": "吃火锅",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049807"
+  },
+  {
+    "type": 7,
+    "label": "实验4-2",
+    "title": "猜近似数字",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049808"
+  },
+  {
+    "type": 7,
+    "label": "实验4-3",
+    "title": "出院",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049809"
+  },
+  {
+    "type": 7,
+    "label": "算法5-1",
+    "title": "构造二叉树",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049810"
+  },
+  {
+    "type": 7,
+    "label": "算法5-2&7",
+    "title": "前序遍历二叉树",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049811"
+  },
+  {
+    "type": 7,
+    "label": "算法5-3&8",
+    "title": "中序遍历二叉树",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049812"
+  },
+  {
+    "type": 7,
+    "label": "算法5-4&9",
+    "title": "后序遍历二叉树",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049813"
+  },
+  {
+    "type": 7,
+    "label": "算法5-5",
+    "title": "计算二叉树高度",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049814"
+  },
+  {
+    "type": 7,
+    "label": "算法5-6",
+    "title": "将表达式树转换成中缀表达式",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049815"
+  },
+  {
+    "type": 7,
+    "label": "算法5-10",
+    "title": "层序遍历二叉树",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049816"
+  },
+  {
+    "type": 7,
+    "label": "算法5-11",
+    "title": "二叉树前序序列化",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049817"
+  },
+  {
+    "type": 7,
+    "label": "算法5-12",
+    "title": "根据前序序列重构二叉树",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049818"
+  },
+  {
+    "type": 7,
+    "label": "算法5-13",
+    "title": "二叉树层序序列化",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049819"
+  },
+  {
+    "type": 7,
+    "label": "算法5-14",
+    "title": "根据层序序列重构二叉树",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049820"
+  },
+  {
+    "type": 7,
+    "label": "算法5-15",
+    "title": "创建哈夫曼树",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049821"
+  },
+  {
+    "type": 7,
+    "label": "算法5-16",
+    "title": "对二进制字符串解码",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049822"
+  },
+  {
+    "type": 7,
+    "label": "算法5-17",
+    "title": "查找根结点",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049823"
+  },
+  {
+    "type": 7,
+    "label": "算法5-18",
+    "title": "查找树中带有指定数据的结点",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049824"
+  },
+  {
+    "type": 7,
+    "label": "算法5-19",
+    "title": "前序遍历树",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049825"
+  },
+  {
+    "type": 7,
+    "label": "算法5-20",
+    "title": "后序遍历树",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049826"
+  },
+  {
+    "type": 7,
+    "label": "算法5-21~23",
+    "title": "前缀树的3个操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049827"
+  },
+  {
+    "type": 7,
+    "label": "算法5-24",
+    "title": "构建后缀树",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049828"
+  },
+  {
+    "type": 7,
+    "label": "练习5-2",
+    "title": "列出叶结点",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049829"
+  },
+  {
+    "type": 7,
+    "label": "练习5-3",
+    "title": "还原二叉树",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049830"
+  },
+  {
+    "type": 7,
+    "label": "实验5-1",
+    "title": "树的同构",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049831"
+  },
+  {
+    "type": 7,
+    "label": "实验5-4",
+    "title": "根据后序和中序遍历输出前序遍历",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049832"
+  },
+  {
+    "type": 7,
+    "label": "实验5-5",
+    "title": "顺序存储的二叉树的最近的公共祖先问题",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049833"
+  },
+  {
+    "type": 7,
+    "label": "实验5-6",
+    "title": "修理牧场",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049834"
+  },
+  {
+    "type": 7,
+    "label": "实验5-7",
+    "title": "家谱处理",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049835"
+  },
+  {
+    "type": 7,
+    "label": "实验5-9",
+    "title": "我爱背单词",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049836"
+  },
+  {
+    "type": 7,
+    "label": "算法6-1~4",
+    "title": "二叉堆的 4 种操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049837"
+  },
+  {
+    "type": 7,
+    "label": "算法6-5",
+    "title": "二叉堆的朴素建堆操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049838"
+  },
+  {
+    "type": 7,
+    "label": "算法6-6",
+    "title": "二叉堆的快速建堆操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049839"
+  },
+  {
+    "type": 7,
+    "label": "算法6-7~8",
+    "title": "多叉堆的上下调整",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049840"
+  },
+  {
+    "type": 7,
+    "label": "算法6-9",
+    "title": "左堆的合并操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049841"
+  },
+  {
+    "type": 7,
+    "label": "算法6-10",
+    "title": "斜堆的合并操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049842"
+  },
+  {
+    "type": 7,
+    "label": "练习6-1",
+    "title": "堆中的路径",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049843"
+  },
+  {
+    "type": 7,
+    "label": "练习6-2",
+    "title": "哈夫曼树的实现",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049844"
+  },
+  {
+    "type": 7,
+    "label": "实验6-1",
+    "title": "是不是堆",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049845"
+  },
+  {
+    "type": 7,
+    "label": "实验6-2",
+    "title": "关于堆的判断",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049846"
+  },
+  {
+    "type": 7,
+    "label": "实验6-3",
+    "title": "Windows消息队列",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049847"
+  },
+  {
+    "type": 7,
+    "label": "实验6-4",
+    "title": "D 度完全树",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049848"
+  },
+  {
+    "type": 7,
+    "label": "算法7-1~6",
+    "title": "邻接矩阵表示的图基本操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049849"
+  },
+  {
+    "type": 7,
+    "label": "算法7-7~10",
+    "title": "邻接表表示的图基本操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049850"
+  },
+  {
+    "type": 7,
+    "label": "算法7-11~12",
+    "title": "深度优先遍历",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049851"
+  },
+  {
+    "type": 7,
+    "label": "算法7-13~14",
+    "title": "广度优先遍历",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049852"
+  },
+  {
+    "type": 7,
+    "label": "算法7-15",
+    "title": "图的连通性判断",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049853"
+  },
+  {
+    "type": 7,
+    "label": "算法7-16",
+    "title": "验证六度空间理论",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049854"
+  },
+  {
+    "type": 7,
+    "label": "算法7-17~19",
+    "title": "强连通分量",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049855"
+  },
+  {
+    "type": 7,
+    "label": "算法7-20~21",
+    "title": "欧拉回路",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049856"
+  },
+  {
+    "type": 7,
+    "label": "算法7-22~24",
+    "title": "双连通分量",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049857"
+  },
+  {
+    "type": 7,
+    "label": "练习7-1",
+    "title": "哥尼斯堡的“七桥问题”",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049858&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验7-1",
+    "title": "汉密尔顿回路",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049859&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验7-2",
+    "title": "列出连通集",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049860&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验7-3",
+    "title": "诈骗电话检测",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049861&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验7-5",
+    "title": "社交网络图中结点的“重要性”计算",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049862&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法8-1",
+    "title": "求单源最短路的Dijkstra算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049863&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法8-2",
+    "title": "求单源最短路的Bellman-Ford算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049864&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法8-3",
+    "title": "求所有点对间最短路的Floyd-Warshall算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049865&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法8-4",
+    "title": "求最小生成树的Prim算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049866&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法8-5",
+    "title": "拓扑排序",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049867&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法8-6",
+    "title": "求图中关键活动",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049868&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法8-7~8",
+    "title": "求解二部图最大匹配的匈牙利算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049869&page=1"
+  },
+  {
+    "type": 7,
+    "label": "练习8-1",
+    "title": "旅游规划",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049870&page=1"
+  },
+  {
+    "type": 7,
+    "label": "练习8-2",
+    "title": "哈利·波特的考试",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049871&page=1"
+  },
+  {
+    "type": 7,
+    "label": "练习8-3",
+    "title": "公路村村通",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049872&page=1"
+  },
+  {
+    "type": 7,
+    "label": "练习8-4",
+    "title": "任务调度的合理性",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049873&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验8-1",
+    "title": "城市间紧急救援",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049874&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验8-2",
+    "title": "最短路的交点",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049875&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验8-3",
+    "title": "打怪升级",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049876&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验8-4",
+    "title": "最小生成树的唯一性",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049877&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验8-5",
+    "title": "拆积木",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049878&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验8-6",
+    "title": "爱之匹配",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049879&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法9-1~3",
+    "title": "不相交集基本操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049880&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法9-4~5",
+    "title": "按秩合并的不相交集操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049881&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法9-6",
+    "title": "以路径压缩策略查找元素所在的集合",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049882&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法9-7",
+    "title": "Tarjan算法求解最近公共祖先",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049883&page=1"
+  },
+  {
+    "type": 7,
+    "label": "练习9-1",
+    "title": "文件传输",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049884&page=1"
+  },
+  {
+    "type": 7,
+    "label": "练习9-2",
+    "title": "团结就是力量",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049885&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验9-1",
+    "title": "部落",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049886&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验9-2",
+    "title": "两个序列的故事",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228279999049887&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法10-x",
+    "title": "排序算法正确性测试",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244032&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法10-13~14",
+    "title": "归并排序兼求逆序对数量",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244033&page=1"
+  },
+  {
+    "type": 7,
+    "label": "练习10-1",
+    "title": "排序",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244034&page=1"
+  },
+  {
+    "type": 7,
+    "label": "练习10-3",
+    "title": "模拟EXCEL排序",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244035&page=1"
+  },
+  {
+    "type": 7,
+    "label": "练习10-4",
+    "title": "插入排序还是归并排序",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244036&page=1"
+  },
+  {
+    "type": 7,
+    "label": "练习10-5",
+    "title": "与零交换",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244037&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验10-2",
+    "title": "德才论",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244038&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验10-3",
+    "title": "插入排序还是堆排序",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244039&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验10-4",
+    "title": "统计工龄",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244040&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验10-5",
+    "title": "清点代码库",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244041&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法11-1",
+    "title": "顺序表的顺序查找",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244042&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法11-2",
+    "title": "折半查找",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244043&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法11-3",
+    "title": "索引表的顺序查找",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244044&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法11-4~6",
+    "title": "二叉查找树的操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244045&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法11-7~9",
+    "title": "AVL树的操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244046&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法11-10",
+    "title": "英文字典的散列",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244047&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法11-11~12",
+    "title": "开放定址法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244048&page=1"
+  },
+  {
+    "type": 7,
+    "label": "练习11-1",
+    "title": "垃圾分类",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244049&page=1"
+  },
+  {
+    "type": 7,
+    "label": "练习11-3",
+    "title": "AVL 树的根",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244050&page=1"
+  },
+  {
+    "type": 7,
+    "label": "练习11-4",
+    "title": "整型关键字的散列映射",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244051&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验11-1",
+    "title": "集合相似度",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244052&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验11-2",
+    "title": "查找树判断",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244053&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验11-3、实验12-1",
+    "title": "树种统计",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244054&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验11-4",
+    "title": "笛卡尔树",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244055&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验11-5",
+    "title": "新浪微博热门话题",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244056&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法12-1~4",
+    "title": "线段树的操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244057&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法12-5~6",
+    "title": "树状数组的操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244058&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法12-7~9",
+    "title": "红黑树的操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244059&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法12-10",
+    "title": "树堆的插入",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244060&page=1"
+  },
+  {
+    "type": 7,
+    "label": "练习12-1",
+    "title": "是否红黑树",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244061&page=1"
+  },
+  {
+    "type": 7,
+    "label": "练习12-2",
+    "title": "三逆序组",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244062&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验12-2",
+    "title": "染成红黑树",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244063&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验12-3",
+    "title": "逆序对",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244064&page=1"
+  },
+  {
+    "type": 7,
+    "label": "练习14-2",
+    "title": "基于词频的文件相似度",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244065&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验14-1",
+    "title": "3阶B+树",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244066&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验14-2",
+    "title": "迷你搜索引擎",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244067&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法15-1",
+    "title": "小规模分书问题的嵌套循环算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244068&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法15-2",
+    "title": "枚举法的嵌套循环实现",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244069&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法15-3",
+    "title": "枚举法的递归实现",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244070&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法15-4",
+    "title": "分书问题的递归枚举算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244071&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法15-5",
+    "title": "回溯法的通用伪代码（以分书问题为例）",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244072&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法15-6",
+    "title": "点集重构问题回溯算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244073&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法15-7",
+    "title": "分治法的伪代码描述",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244074&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法15-8~9",
+    "title": "第n项斐波那契数的计算",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244075&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法15-10",
+    "title": "计算矩阵连乘问题最优解的动态规划算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244076&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法15-11",
+    "title": "活动安排问题的贪心算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244077&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法15-12",
+    "title": "连续背包问题的贪心算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244078&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法15-13",
+    "title": "离散背包问题的递归分治解法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244079&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法15-14",
+    "title": "整数重量限制下离散背包问题的动态规划解法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244080&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验15-3",
+    "title": "拼题A打卡奖励",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244081&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验15-4",
+    "title": "有多少红黑树",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244082&page=1"
+  },
+  {
+    "type": 7,
+    "label": "实验15-5",
+    "title": "代金券",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244083&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法16-1",
+    "title": "顶点覆盖问题的近似算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244084&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法16-2",
+    "title": "基于贪心策略的离散背包问题近似算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244085&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法16-3",
+    "title": "基于动态规划的离散背包问题近似算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244086&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法16-4",
+    "title": "A算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244087&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法16-5",
+    "title": "爬山算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244088&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法16-6",
+    "title": "模拟退火算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244089&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法16-7",
+    "title": "幂取模算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244090&page=1"
+  },
+  {
+    "type": 7,
+    "label": "算法16-8",
+    "title": "MillerRabin 素数测试算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/7?problemSetProblemId=1927228280003244091&page=1"
+  },
+  {
+    "type": 9,
+    "label": "算法13-1~4",
+    "title": "败者树操作",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/9?problemSetProblemId=1927228280003244092"
+  },
+  {
+    "type": 9,
+    "label": "算法13-5",
+    "title": "置换选择算法",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/9?problemSetProblemId=1927228280003244093"
+  },
+  {
+    "type": 9,
+    "label": "练习13-1",
+    "title": "数据去重",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/9?problemSetProblemId=1927228280003244094"
+  },
+  {
+    "type": 9,
+    "label": "实验13-1",
+    "title": "文件排序",
+    "url": "https://pintia.cn/problem-sets/1927228151378894848/exam/problems/type/9?problemSetProblemId=1927228280003244095"
+  }
+]

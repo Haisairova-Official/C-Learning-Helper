@@ -1,0 +1,25 @@
+[Unit]
+Description=C Assist isolated C compiler and executor
+After=local-fs.target
+
+[Service]
+Type=simple
+# The manager needs privileges to create namespaces/cgroups on Rocky 8.
+# Student processes use the unprivileged identity in mount.yaml.
+User=root
+Group=root
+EnvironmentFile=/etc/c-assist-judge/judge.env
+WorkingDirectory=/var/lib/c-assist-judge
+ExecStartPre=/bin/sh /usr/local/libexec/c-assist-judge-preflight.sh
+ExecStart=/usr/local/libexec/go-judge -http-addr=127.0.0.1:5050 -parallelism=2 -no-fallback -mount-conf=/etc/c-assist-judge/mount.yaml -file-timeout=5m -output-limit=16777216 -copy-out-limit=16777216 -silent
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+KillMode=control-group
+UMask=0077
+LimitNOFILE=4096
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

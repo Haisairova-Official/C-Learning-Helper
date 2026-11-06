@@ -1,0 +1,12 @@
+[Unit]
+Description=C Assist LAN HTTP proxy to frontend
+Requires=c-assist-lan-http.socket
+After=c-assist-lan-http.socket
+
+[Service]
+ExecStart=/usr/lib/systemd/systemd-socket-proxyd 127.0.0.1:5173
+DynamicUser=yes
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes

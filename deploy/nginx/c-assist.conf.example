@@ -1,0 +1,29 @@
+# Replace domain and certificate paths before installing this template.
+server {
+    listen 80;
+    server_name c-assist.example.edu;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name c-assist.example.edu;
+    ssl_certificate /etc/pki/tls/certs/c-assist.crt;
+    ssl_certificate_key /etc/pki/tls/private/c-assist.key;
+    root /opt/c-assist/frontend/dist;
+    index index.html;
+    client_max_body_size 6m;
+
+    location /api/ {
+        proxy_pass http://127.0.0.1:8080;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 70s;
+    }
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}

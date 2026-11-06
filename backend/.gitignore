@@ -1,0 +1,7 @@
+/target/
+/.env
+/application-local.yml
+/.local/
+
+__pycache__/
+*.pyc

@@ -1,0 +1,33 @@
+import type { Api, Actor } from './types';
+import { post, request, resetCsrf } from './http';
+import { importSourceType } from '../lib/importing';
+export const realApi: Api = {
+  profile: () => request('/profile'),
+  saveProfile: input => request('/profile', { method: 'PUT', body: JSON.stringify(input) }),
+  uploadAvatar: file => { const body = new FormData(); body.set('file', file); return request('/profile/avatar', { method: 'POST', body }); },
+  removeAvatar: () => request('/profile/avatar', { method: 'DELETE' }),
+  aiProvider: () => request('/ai/analyses/provider'),
+  me: () => request('/auth/me'),
+  login: async (username, password) => { const actor = await post<Actor>('/auth/login', { username, password }); resetCsrf(); await request('/auth/csrf'); return actor; },
+  logout: async () => { await post<void>('/auth/logout', {}); resetCsrf(); },
+  assignments: () => request('/student/assignments'),
+  assignment: id => request(`/student/assignments/${encodeURIComponent(id)}`),
+  problem: (assignmentId, problemId) => request(`/student/assignments/${encodeURIComponent(assignmentId)}/problems/${encodeURIComponent(problemId)}`),
+  submit: (input, key) => post('/submissions', input, key),
+  submission: id => request(`/submissions/${encodeURIComponent(id)}`),
+  submissions: (assignmentId, problemId) => request(`/submissions?assignmentId=${encodeURIComponent(assignmentId)}&problemId=${encodeURIComponent(problemId)}&page=1&pageSize=20`),
+  analyse: input => post('/ai/analyses', input),
+  analysis: id => request(`/ai/analyses/${encodeURIComponent(id)}`),
+  teacherProblems: () => request('/teacher/problems?page=1&pageSize=100'),
+  saveProblem: input => input.id ? request(`/teacher/problems/${encodeURIComponent(input.id)}`, { method: 'PUT', body: JSON.stringify(input) }) : post('/teacher/problems', input),
+  parse: input => { const sourceType = importSourceType(input); if (typeof input === 'string') return post('/imports/parse', { sourceType, text: input }); const body = new FormData(); body.set('file', input); body.set('sourceType', sourceType); return request('/imports/parse', { method: 'POST', body }); },
+  importJob: id => request(`/imports/${encodeURIComponent(id)}`),
+  commit: (id, title, candidates, key) => post(`/imports/${encodeURIComponent(id)}/commit`, { title, candidates }, key),
+  createClass: name => post('/classes', { name }),
+  addMember: (classId, studentId) => post(`/classes/${encodeURIComponent(classId)}/members`, { studentId }),
+  classes: () => request('/classes?page=1&pageSize=100'),
+  members: (id, page=1) => request(`/classes/${encodeURIComponent(id)}/members?page=${page}&pageSize=100`),
+  teacherAssignments: () => request('/teacher/assignments?page=1&pageSize=100'),
+  publish: input => post('/teacher/assignments', input),
+  results: id => request(`/teacher/assignments/${encodeURIComponent(id)}/results?page=1&pageSize=100`),
+};

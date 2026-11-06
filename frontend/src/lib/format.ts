@@ -1,0 +1,3 @@
+export const dateTime = (value: string) => new Intl.DateTimeFormat('zh-CN', { timeZone: 'Asia/Shanghai', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date(value));
+export const labels: Record<string, string> = { QUEUED: '排队中', COMPILING: '编译中', RUNNING: '运行中', FINISHED: '评测完成', SYSTEM_ERROR: '评测服务异常', ACCEPTED: '全部通过', PARTIAL_ACCEPTED: '部分正确', WRONG_ANSWER: '答案错误', PRESENTATION_ERROR: '输出格式不符', COMPILATION_ERROR: '编译错误', RUNTIME_ERROR: '运行错误', TIME_LIMIT_EXCEEDED: '时间超限', MEMORY_LIMIT_EXCEEDED: '内存超限', OUTPUT_LIMIT_EXCEEDED: '输出超限', STUDENT: '学生', TEACHER: '教师', ADMIN: '管理员' };
+export const label = (value: string | null) => value ? labels[value] ?? value : '等待结果';
