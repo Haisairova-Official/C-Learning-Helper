@@ -66,7 +66,10 @@ public final class HttpGoJudgeTransport implements GoJudgeTransport, AutoCloseab
             var response = send(builder("/config").timeout(Duration.ofSeconds(3)).GET().build());
             if (response.statusCode()!=200) return false;
             var config=mapper.readTree(response.body()).get("runnerConfig");
-            if (config==null || !config.path("seccomp").asBoolean()) return false;
+            if (config == null) return false;
+            if (System.getProperty("os.name", "").startsWith("Windows")
+                    && "appcontainer-job-v1".equals(config.path("windowsIsolation").asString())) return true;
+            if (!config.path("seccomp").asBoolean()) return false;
             var controllers=new java.util.HashSet<String>();
             for (var entry:config.path("cgroupControllers")) controllers.add(entry.asString());
             return controllers.containsAll(Set.of("cpu","memory","pids"));

@@ -8,7 +8,7 @@ if [ -z "${ES_AUTH_TOKEN:-}" ]; then
 fi
 [ -x "$judge_binary" ] || { echo "Pinned go-judge binary is missing" >&2; exit 1; }
 [ -d /sys/fs/cgroup ] || { echo "cgroup filesystem is missing" >&2; exit 1; }
-for item in usr/bin/gcc usr/bin/g++ bin lib lib64 etc/ld.so.cache; do
+for item in usr/bin/gcc usr/bin/g++ bin lib etc/ld.so.cache; do
     [ -e "$judge_rootfs/$item" ] || { echo "Compiler rootfs is incomplete" >&2; exit 1; }
     judge_resolved=$(realpath "$judge_rootfs/$item")
     case "$judge_resolved" in

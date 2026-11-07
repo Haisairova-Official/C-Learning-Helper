@@ -10,6 +10,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Profile;
+import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
@@ -20,7 +21,14 @@ import org.springframework.transaction.annotation.Transactional;
 @ConditionalOnProperty(name="app.demo.enabled",havingValue="true")
 public class DemoDataInitializer implements ApplicationRunner {
     private final JdbcTemplate jdbc;private final PasswordEncoder encoder;private final TeachingService teaching;
-    public DemoDataInitializer(JdbcTemplate jdbc,PasswordEncoder encoder,TeachingService teaching){this.jdbc=jdbc;this.encoder=encoder;this.teaching=teaching;}
+    private final Environment environment;
+
+    public DemoDataInitializer(JdbcTemplate jdbc, PasswordEncoder encoder, TeachingService teaching, Environment environment) {
+        this.jdbc = jdbc;
+        this.encoder = encoder;
+        this.teaching = teaching;
+        this.environment = environment;
+    }
 
     @Override @Transactional
     public void run(ApplicationArguments arguments){
@@ -47,7 +55,7 @@ public class DemoDataInitializer implements ApplicationRunner {
 
     private void seedUser(String id,String username,String displayName,Role role){
         if(jdbc.queryForObject("SELECT COUNT(*) FROM app_user WHERE id=?",Integer.class,id)==0)
-            jdbc.update("INSERT INTO app_user(id,username,display_name,password_hash,role,enabled,created_at) VALUES(?,?,?,?,?,TRUE,?)",id,username,displayName,encoder.encode("CassistDemo2026!"),role.name(),LocalDateTime.now(ZoneOffset.UTC));
+            jdbc.update("INSERT INTO app_user(id,username,display_name,password_hash,role,enabled,created_at) VALUES(?,?,?,?,?,TRUE,?)",id,username,displayName,encoder.encode(environment.getProperty("app.demo.password." + username, "CassistDemo2026!")),role.name(),LocalDateTime.now(ZoneOffset.UTC));
     }
 
     /** Explicit demo fixtures, not real school numbers; existing assigned values always win. */

@@ -222,3 +222,9 @@ B、C 负责各自业务代码，D 负责 frontend/。公共依赖变更由对�
 按用户要求新建C-Learning-Helper仓库，AGPLv3。当前无Git历史；采用已登录账号下私有仓库，检查全量源码/文档/配置与密钥排除后初始化main并推送，不重启服务。详细过程见 [GITHUB_REPOSITORY.md](../implementation/A/GITHUB_REPOSITORY.md)。
 
 GitHub已创建私有仓库Haisairova-Official/C-Learning-Helper并推送main。294文件远端树与本地逐blob一致，GitHub识别AGPLv3，敏感值扫描无命中。首次提交ba315a5；交接更新另行提交。不影响现有服务。
+
+## 2026-11-07 根目录安装与启动入口（已交付，Windows 待真机验收）
+
+主 Agent 接管本轮部署入口、私有数据库启动、评测程序定位及前端静态资源发布。核对新 Linux / Windows 设备依赖，提供 install.sh、install.bat、run 和可选 --port，默认 HTTP 80。跨 B/D 涉及部署脚本和已构建的网页，无接口或迁移变更。本机与跨平台验证分别记录。
+
+本轮已交付根目录的四个入口。用户明确要求 Linux 与 Windows 原生兼容，Windows x64 使用项目私有工具链、MariaDB、AppContainer 与 Job Object。平台采用相同的启动参数和提交接口。按用户关机收尾要求，Windows 整机验收留待下次。Linux 本机实测结果、变更范围、目标机遗留项见 [安装与启动交接](../implementation/A/INSTALL_RUN.md)。

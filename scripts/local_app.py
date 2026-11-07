@@ -45,7 +45,7 @@ def stop_one(service):
         return
     os.kill(pid,signal.SIGTERM)
     for _ in range(150):
-        if owned_pid(service) is None or not open_port(PORTS[service]): break
+        if owned_pid(service) is None: break
         time.sleep(.1)
     if open_port(PORTS[service]): raise RuntimeError(f'{service} did not stop; refusing to force kill')
     print(f'Stopped {service}',flush=True)
@@ -59,18 +59,22 @@ def spawn(service,args,cwd):
         process=subprocess.Popen(args,cwd=cwd,stdin=subprocess.DEVNULL,stdout=log,stderr=log,start_new_session=True)
     PIDFILES[service].parent.mkdir(parents=True,exist_ok=True)
     PIDFILES[service].write_text(str(process.pid))
-    for _ in range(300):
+    for _ in range(1200):
         if process.poll() is not None: raise RuntimeError(f'{service} exited; see .local/{service}.log or backend/.local logs')
         try:
             if service=='database': ready=open_port(PORTS[service])
             else:
                 url=f'http://127.0.0.1:{PORTS[service]}'+('/api/auth/csrf' if service=='backend' else '/')
                 with urllib.request.urlopen(url,timeout=1) as response: ready=response.status==200
+            if service == 'backend':
+                stamp = ROOT / 'backend/.local/backend.ready'
+                ready = ready and stamp.exists() and stamp.read_text().strip() == str(process.pid)
             if ready:
                 print(f'Ready {service}: 127.0.0.1:{PORTS[service]}',flush=True)
                 return
         except (OSError,urllib.error.URLError): pass
         time.sleep(.1)
+    os.killpg(process.pid, signal.SIGTERM)
     raise RuntimeError(f'{service} readiness timed out; inspect local logs')
 
 def main():
@@ -89,7 +93,8 @@ def main():
             if pidfile.exists():
                 try:
                     pid=int(pidfile.read_text())
-                    if b'/tmp/cassist-judge-bin/go-judge' in Path(f'/proc/{pid}/cmdline').read_bytes():
+                    binary = Path(f'/proc/{pid}/cmdline').read_bytes().split(b'\0')[0]
+                    if Path(f'/proc/{pid}').stat().st_uid == os.getuid() and binary in {os.fsencode(ROOT/'.local/bin/go-judge'), b'/tmp/cassist-judge-bin/go-judge'}:
                         os.kill(pid,signal.SIGTERM)
                         print('Stopped local judge',flush=True)
                 except (OSError,ValueError): pass

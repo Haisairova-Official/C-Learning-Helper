@@ -1,0 +1,5 @@
+*.bat text eol=crlf
+*.sh text eol=lf
+*.py text eol=lf
+run text eol=lf
+backend/mvnw text eol=lf

@@ -17,3 +17,5 @@
 ## PTA 蓝本
 
 `docs/implementation/C/PTA_*` 保存公开来源目录、链接及项目整理的蓝本，保留作者、单位和来源信息。原题及第三方材料的权利仍归其权利人；项目代码许可证不对原题重新授权。`examples/pta/function-insert.json` 是本项目独立改编的示例，不能冒充 PTA 官方答案或隐藏用例。
+
+Windows 安装时从 Go 模块下载 go-judge v1.14.0（MIT，Copyright © 2019 Yang Gao），在临时副本中接入本项目的 AppContainer 适配。源码副本包含上游 LICENSE，编译后随程序保留该许可。项目专用工具链和可执行文件在安装时下载或构建。

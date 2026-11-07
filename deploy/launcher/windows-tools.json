@@ -1,0 +1,27 @@
+{
+  "jdk": {
+    "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13%2B9/OpenJDK21U-jdk_x64_windows_hotspot_21.0.13_9.zip",
+    "sha256": "a4dbaa05fca4bd89d84584e58c459bd732efebb1722af80ab13c6516832004f9",
+    "file": "bin/java.exe"
+  },
+  "node": {
+    "url": "https://nodejs.org/dist/v22.23.4/node-v22.23.4-win-x64.zip",
+    "sha256": "cbc74b5e0982c9dbb41525fd8fb5dcd32fbee237863f7829072f4639a1ce5f20",
+    "file": "node.exe"
+  },
+  "go": {
+    "url": "https://go.dev/dl/go1.27.3.windows-amd64.zip",
+    "sha256": "f26081f438319757f8a1b46d7d0b2c5ec7583d4038e485e0aa725cfde7885fff",
+    "file": "bin/go.exe"
+  },
+  "mariadb": {
+    "url": "https://archive.mariadb.org/mariadb-11.4.10/winx64-packages/mariadb-11.4.10-winx64.zip",
+    "sha256": "fb7c76f0804321ee373daa49145f2056d2d88f321b614130adeb05a1644ea003",
+    "file": "bin/mariadbd.exe"
+  },
+  "gcc": {
+    "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/15.2.0posix-13.0.0-ucrt-r4/winlibs-x86_64-posix-seh-gcc-15.2.0-mingw-w64ucrt-13.0.0-r4.zip",
+    "sha256": "cd140e153bf303703f9dce27a4b7d0a8dcb2a41c39b7fffa477a12a8bd049bca",
+    "file": "bin/gcc.exe"
+  }
+}

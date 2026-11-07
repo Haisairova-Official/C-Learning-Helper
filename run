@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+source "$ROOT/deploy/launcher/env.sh"
+if [[ ${1:-} == --help || ${1:-} == -h ]]; then
+    echo '用法：./run [--port 端口]（默认 80），./run status，./run stop。首次使用请执行 ./install.sh。'
+    exit 0
+fi
+python=$(python_runtime) || { echo '请先运行 ./install.sh 安装 Python 和项目依赖。' >&2; exit 1; }
+exec "$python" "$ROOT/scripts/launch.py" "$@"

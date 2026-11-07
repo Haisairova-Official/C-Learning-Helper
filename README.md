@@ -2,51 +2,33 @@
 
 当前为可在本机运行的初步版本。已接通登录、教师题库与作业、Easy Parse 导入、学生在线编程、真实隔离评测、提交历史和成绩查询。
 
+## 安装与启动
+
+**Windows 10/11 x64**　首次双击根目录的 `install.bat`。看到 C 和 C++ 自检通过后，双击 `run.bat`，打开 [本机课堂](http://localhost/)。安装器使用 Windows 原生程序和 AppContainer，无需 WSL。
+
+**Linux**　在项目根目录执行两条命令。安装系统依赖时可能要求输入 sudo 密码。
+
+```sh
+./install.sh
+./run
+```
+
+两个平台默认监听 `0.0.0.0:80`。从局域网访问时，在浏览器输入 `http://服务器的局域网IP/`。网页通过同源 `/api` 代理连接后端。
+
+| 操作 | Windows 命令提示符 | Linux |
+| --- | --- | --- |
+| 改用 9000 端口 | `run.bat --port 9000` | `./run --port 9000` |
+| 查看运行状态 | `run.bat status` | `./run status` |
+| 停止 | `run.bat stop` | `./run stop` |
+| 检查安装 | `install.bat --check` | `./install.sh --check` |
+
+新安装的演示账号为 `admin`、`teacher`、`student` 和 `student2`，各有独立随机密码。Windows 的初始密码文件位于 `.local/windows/private/instance/initial-accounts.env`，Linux 位于 `backend/.local/initial-accounts.env`。已有数据库沿用原密码。
+
+Linux 已在开发机验证网页、接口和隔离编译。Windows 网页入口与评测器已交叉编译，Windows 整机安装及课堂负载仍待实测。平台依赖、数据位置与自检说明见 [安装交接](docs/implementation/A/INSTALL_RUN.md)。正式服务器配置见 [部署说明](docs/implementation/A/DEPLOYMENT.md)。
+
 ## 许可证
 
-本项目原创代码采用 **GNU Affero General Public License v3.0 only**（`AGPL-3.0-only`），完整条款见 [LICENSE](LICENSE)。第三方脚本、依赖、题目来源与角色素材的说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
-
-## 直接试用
-
-本机地址：[打开系统](http://127.0.0.1/)。当前局域网地址：[局域网入口](http://192.168.2.100/)（2026-11-06 实测；使用 HTTP，设备 IP 改变后需使用新地址）。80 端口由已安装的专用 systemd socket 转到前端 5173，后端继续走 `/api` 代理；5173 也可直接访问。
-
-| 角色 | 演示账号 |
-| --- | --- |
-| 教师 | teacher |
-| 学生 | student |
-| 管理员 | admin |
-| 权限测试用的第二学生 | student2 |
-
-以上本机演示账户密码均为 **CassistDemo2026!**。这些账户仅由 demo profile 初始化，正式部署不应启用该 profile。
-
-## 启动与停止
-
-在项目根目录运行：
-
-```sh
-python3 scripts/local_app.py start
-python3 scripts/local_app.py status
-python3 scripts/local_app.py stop
-```
-
-需要重启时使用：
-
-```sh
-python3 scripts/local_app.py restart
-```
-
-启动器将数据库、后端和前端作为独立进程启动，避免开发 Agent 结束后页面失联。只管理 PID 与程序路径能够确认为本项目的进程，不替换其他服务。前端按用户要求监听 `0.0.0.0:5173`，允许局域网设备访问；`/api` 仍由前端代理到本机后端。后端 8080、评测 15050、演示数据库 33077 继续只绑定本机回环地址。
-
-这个入口面向当前 Linux 开发机，依赖已安装的 Java、Node.js、Go、GCC/G++、mysqld 和可用的用户级隔离/资源控制。首次缺少构建产物时会构建后端并安装前端锁定依赖；不负责全局安装软件或修改操作系统设置。
-
-代码修改后重新构建：
-
-```sh
-cd backend
-./mvnw -B -ntp verify
-```
-
-前端在 frontend 目录执行 npm run build。正式部署步骤见 [部署说明](docs/implementation/A/DEPLOYMENT.md)。
+本项目原创代码采用 **GNU Affero General Public License v3.0 only**（`AGPL-3.0-only`）。[完整条款](LICENSE) · [第三方材料说明](THIRD_PARTY_NOTICES.md)
 
 ## 建议体验顺序
 
@@ -55,7 +37,7 @@ cd backend
 3. 在题库补齐计分测试用例、参考答案和资源限制，把题目发布给班级。
 4. 用 student 登录，进入作业，用网页编辑器提交 C / C++ 完整程序或指定函数。
 5. 查看真实评测结果、测试点得分、提交历史；用教师账号查看成绩。
-6. 点击 AI 排错指导；当前本机已接入 DeepSeek，使用题干、教师参考答案和当前代码生成有限指导，结果经后端检查后展示。
+6. 配置 AI 后点击排错指导，使用题干、教师参考答案和当前代码生成有限指导，结果经后端检查后展示。
 
 已准备“第一次练习：输入与输出”和“导入与评测体验”等合成演示数据。测试脚本还会创建标明用途的验收记录。
 
@@ -75,7 +57,7 @@ cd backend
 
 ## 当前环境与未完成范围
 
-- 正式数据库选型仍为 **MariaDB**。本机已有 MySQL 二进制，因此演示使用独立 MySQL 实例验证业务及兼容 SQL，未替换或操作其他数据库。生产 MariaDB 迁移仍需实测。
+- 正式数据库选型仍为 **MariaDB**。本机已有 MySQL 二进制，因此演示使用独立 MySQL 实例验证业务及兼容 SQL，未替换或操作其他数据库。已另用干净 MariaDB 实例验证 12 个迁移、登录和重启后的数据保留。
 - 当前构建宿主是 JDK 27，编译目标为 Java 21；Rocky 8、JDK 21 实际运行及正式服务器隔离配置尚待验收。
 - 用户已提供 DeepSeek 凭据，本机启用外部 DeepSeek 服务；它不是学校私有部署。密钥只存于后端私有配置，使用与验收见 [DeepSeek 接入说明](docs/implementation/C/DEEPSEEK.md)。未指定真实模式的 demo profile 仍可显式模拟；真实模式凭据缺失不会回退模拟。
 - PDF/OCR、多文件题、特殊裁判、查重及监考尚未纳入这个初版。
