@@ -27,7 +27,7 @@ GitHub仓库已建立：[C-Learning-Helper](https://github.com/Haisairova-Offici
 
 将下面这段中的字母替换为 A、B、C 或 D：
 
-> 你负责本项目 Agent X 的工作。先阅读根目录 AGENTS.md 和 docs/agents/README.md，再阅读公共需求、接口契约、决策记录及 docs/agents/AGENT_X.md。按 TODO 完成职责内的实现与验证，并持续更新自己的 Markdown 进度和交接。公共契约尚未冻结的部分使用适配接口或模拟数据推进，将依赖和建议写入交接文件。完成时给出实际改动、测试结果及未完成事项。
+> 你负责本项目 Agent X 的工作。先阅读 docs/agents/README.md，若本地有 AGENTS.md 也一并阅读，再阅读公共需求、接口契约、决策记录及 docs/agents/AGENT_X.md。按 TODO 完成职责内的实现与验证，并持续更新自己的 Markdown 进度和交接。公共契约尚未冻结的部分使用适配接口或模拟数据推进，将依赖和建议写入交接文件。完成时给出实际改动、测试结果及未完成事项。
 
 各 Agent 必须能访问同一份项目文件，或从同一份契约基线开始。如果使用独立工作副本，合并代码时也应同步交接文档。
 

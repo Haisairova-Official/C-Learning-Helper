@@ -228,3 +228,7 @@ GitHub已创建私有仓库Haisairova-Official/C-Learning-Helper并推送main。
 主 Agent 接管本轮部署入口、私有数据库启动、评测程序定位及前端静态资源发布。核对新 Linux / Windows 设备依赖，提供 install.sh、install.bat、run 和可选 --port，默认 HTTP 80。跨 B/D 涉及部署脚本和已构建的网页，无接口或迁移变更。本机与跨平台验证分别记录。
 
 本轮已交付根目录的四个入口。用户明确要求 Linux 与 Windows 原生兼容，Windows x64 使用项目私有工具链、MariaDB、AppContainer 与 Job Object。平台采用相同的启动参数和提交接口。按用户关机收尾要求，Windows 整机验收留待下次。Linux 本机实测结果、变更范围、目标机遗留项见 [安装与启动交接](../implementation/A/INSTALL_RUN.md)。
+
+## 2026-11-07 仓库维护
+
+根目录 Agent 指令文件仅保存在本地，仓库协作入口为 [README.md](README.md)。

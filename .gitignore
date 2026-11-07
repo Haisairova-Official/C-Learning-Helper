@@ -20,3 +20,6 @@ coverage/
 *.key
 *.p12
 *.pfx
+
+/AGENTS.md
+/agent.md
