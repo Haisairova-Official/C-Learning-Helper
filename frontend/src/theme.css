@@ -1,0 +1,129 @@
+/* Light values remain at their original call sites as var() fallbacks. */
+:root {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+  --page-bg: #111923;
+  --surface: #19232f;
+  --surface-soft: #202e3c;
+  --sidebar-bg: #102530;
+  --text-primary: #dce6ee;
+  --text-secondary: #b7c7d4;
+  --text-muted: #9aaebd;
+  --border: #3b4d5e;
+  --border-subtle: #2b3c4c;
+  --accent: #62c6c1;
+  --accent-soft: #203b40;
+  --accent-border: #3c7779;
+  --focus: #8ddad3;
+  --success-soft: #1d3c32;
+  --success-text: #81d8a5;
+  --success-border: #467e60;
+  --warning-soft: #3d3421;
+  --warning-text: #f0ca70;
+  --warning-border: #90763c;
+  --danger-soft: #3d252e;
+  --danger-text: #ff9898;
+  --danger-border: #99575f;
+  --ink: var(--text-primary);
+  --teal: var(--accent);
+  --muted: var(--text-muted);
+
+  --el-bg-color: var(--surface);
+  --el-bg-color-page: var(--page-bg);
+  --el-bg-color-overlay: var(--surface-soft);
+  --el-text-color-primary: var(--text-primary);
+  --el-text-color-regular: var(--text-secondary);
+  --el-text-color-secondary: var(--text-muted);
+  --el-text-color-placeholder: var(--text-muted);
+  --el-text-color-disabled: #81919f;
+  --el-border-color: var(--border);
+  --el-border-color-light: var(--border-subtle);
+  --el-border-color-lighter: var(--border-subtle);
+  --el-border-color-extra-light: var(--border-subtle);
+  --el-border-color-dark: #496174;
+  --el-border-color-darker: #5a7589;
+  --el-fill-color: #253443;
+  --el-fill-color-light: var(--surface-soft);
+  --el-fill-color-lighter: #1c2a37;
+  --el-fill-color-extra-light: var(--surface);
+  --el-fill-color-dark: #2b3d4d;
+  --el-fill-color-darker: #34495a;
+  --el-fill-color-blank: var(--surface);
+  --el-color-primary: var(--accent);
+  --el-color-primary-light-3: #4ca4a1;
+  --el-color-primary-light-5: #3c7779;
+  --el-color-primary-light-7: #2c5257;
+  --el-color-primary-light-8: #25464b;
+  --el-color-primary-light-9: var(--accent-soft);
+  --el-color-primary-dark-2: #87d9d2;
+  --el-color-success: var(--success-text);
+  --el-color-success-light-3: #63af87;
+  --el-color-success-light-5: #467e60;
+  --el-color-success-light-7: #305440;
+  --el-color-success-light-8: #254636;
+  --el-color-success-light-9: var(--success-soft);
+  --el-color-warning: var(--warning-text);
+  --el-color-warning-light-3: #c4a55e;
+  --el-color-warning-light-5: #90763c;
+  --el-color-warning-light-7: #5c4c2b;
+  --el-color-warning-light-8: #4b4028;
+  --el-color-warning-light-9: var(--warning-soft);
+  --el-color-danger: var(--danger-text);
+  --el-color-danger-light-3: #cb7c82;
+  --el-color-danger-light-5: #99575f;
+  --el-color-danger-light-7: #673e48;
+  --el-color-danger-light-8: #50323b;
+  --el-color-danger-light-9: var(--danger-soft);
+  --el-color-error: var(--danger-text);
+  --el-color-error-light-3: #cb7c82;
+  --el-color-error-light-5: #99575f;
+  --el-color-error-light-7: #673e48;
+  --el-color-error-light-8: #50323b;
+  --el-color-error-light-9: var(--danger-soft);
+  --el-color-info: var(--text-muted);
+  --el-color-info-light-3: #7c919f;
+  --el-color-info-light-5: #596e7d;
+  --el-color-info-light-7: #3b4c5a;
+  --el-color-info-light-8: #2d3d4b;
+  --el-color-info-light-9: var(--surface-soft);
+}
+
+html.dark .el-table {
+  --el-table-border-color: var(--border-subtle);
+  --el-table-header-bg-color: var(--surface-soft);
+  --el-table-header-text-color: var(--text-muted);
+}
+
+html.dark .el-button--primary:not(.is-plain, .is-text, .is-link),
+html.dark .el-tag--dark {
+  --el-button-text-color: #102530;
+  --el-button-hover-text-color: #102530;
+  --el-button-active-text-color: #102530;
+  --el-button-disabled-text-color: #c1d2da;
+  --el-tag-text-color: #102530;
+}
+
+/* Selected controls also use dark ink on the lighter teal fill. */
+html.dark .el-radio-button__original-radio:checked + .el-radio-button__inner,
+html.dark .el-date-table td.current:not(.disabled) .el-date-table-cell__text {
+  color: #102530;
+}
+html.dark .el-checkbox__input.is-checked .el-checkbox__inner::after {
+  border-color: #102530;
+}
+html.dark .el-radio__input.is-checked .el-radio__inner::after {
+  background: #102530;
+}
+html.dark .class-card.selected {
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+html.dark .el-input__wrapper {
+  box-shadow: 0 0 0 1px var(--el-input-border-color, var(--border)) inset;
+}
+html.dark .el-input__wrapper.is-focus {
+  box-shadow: 0 0 0 1px var(--el-input-focus-border-color, var(--accent)) inset;
+}
