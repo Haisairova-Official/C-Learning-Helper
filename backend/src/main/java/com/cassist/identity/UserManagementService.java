@@ -41,7 +41,7 @@ public class UserManagementService {
         if(!text(username).matches("[A-Za-z0-9][A-Za-z0-9_.-]{2,99}")) invalid("账号需为 3 至 100 位字母、数字、点、下划线或连字符");
     }
     public static void validatePassword(String password) {
-        if(password==null || password.length()<8 || password.getBytes(StandardCharsets.UTF_8).length>72 || !password.matches("(?s).*[A-Za-z].*") || !password.matches("(?s).*[0-9].*")) invalid("初始密码需包含字母和数字，至少 8 位且不超过 72 字节");
+        if(password==null || password.length()<8 || password.getBytes(StandardCharsets.UTF_8).length>72 || !password.matches("(?s).*[A-Za-z].*") || !password.matches("(?s).*[0-9].*")) invalid("密码需包含字母和数字，至少 8 位且不超过 72 字节");
     }
     private UserView map(ResultSet rs,int index) throws SQLException {
         String id=rs.getString("id");

@@ -302,3 +302,18 @@ UserView：`{id,username,displayName,role,studentNumber,nickname,bio,aiReplyStyl
 - `GET /api/assignments/{assignmentId}/problems/{problemId}/chat/participants/{authorId}/avatar`：先校验聊天室读取权限（含学生抽题与开关），再要求作者确实在当前作业、题目版本有消息；无头像/无该房间消息返回404。成功返回规范化PNG，private/no-store、Vary:Cookie、nosniff。
 - 不改变本人 `/profile/avatar` 权限，不新增全站任意用户头像读取接口，不暴露简介、学号等额外信息。既有教师/管理员在关闭讨论时管理历史的规则保持。
 - 每条消息旁32px圆头像；缺失或加载失败时显示姓名首个Unicode字符。图片不重复朗读姓名。无新增图片资产或数据库迁移。
+
+## 2026-11-07 密码管理补充
+
+- `POST /api/auth/password`：已登录用户提交 `{currentPassword,newPassword}`，仅修改当前账号；旧密码不正确返回400/INVALID_CURRENT_PASSWORD。
+- `POST /api/admin/users/{id}/password`：仅管理员提交 `{newPassword}` 重置目标密码，无需旧密码；非管理员403，目标不存在404。
+- 两接口均要求CSRF，成功204。新密码包含ASCII字母和数字、至少8个Java字符且UTF-8最多72字节，复用账号创建规则；后端仅存加盐散列，不返回或记录密码。
+- 事务提交后目标账号的全部服务端Session失效，需重新登录；重置其他账号不影响管理员自己的Session。单实例原生部署使用Servlet Session监听器跟踪；多实例部署需共享会话及跨实例失效机制。无数据库迁移。
+
+## 2026-11-07 自主测试
+
+- `POST /api/trials`：仅学生，沿正式提交的作业成员、固定版本、开放截止时间授权；输入 `{assignmentId,problemId,problemVersionId,language,sourceCode,stdin,expectedOutput?,driverCode?}`。expectedOutput为null表示不比较，空字符串表示期望空输出。返回202 `{id,status,result}`，status为RUNNING或COMPLETED。
+- `GET /api/trials/{id}`：仅任务本人；返回同一结构。临时结果最多10分钟、最多保留100项，重启丢失；过期或他人任务均404。写入需CSRF，结果no-store。全局最多2个自主任务，同一学生最多1个，繁忙429。
+- result：`{verdict,stdout,stderr,compileMessage,timeMs,memoryKb}`，标准输出仅来自学生代码与自填数据；异常返回SYSTEM_ERROR，不返回评测服务内部错误。
+- 代码遵守题目长度与语言限制，代码加自备测试程序合计64KiB，标准输入/预期输出各最多64KiB。复用go-judge隔离环境，CPU最多3秒、实际最多10秒、内存最多256MiB，取题目较低限制，输出最多64KiB，进程数1，编译沿既有10/20秒限制。
+- 函数题需自备driverCode（含main），接在学生函数后编译；绝不拼接教师私有模板、答案或隐藏用例。正式提交仍只含学生函数。预期输出使用现有EXACT比对规则。无正式提交或成绩写入，无数据库迁移。

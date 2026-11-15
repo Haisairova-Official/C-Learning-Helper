@@ -232,3 +232,15 @@ GitHub已创建私有仓库Haisairova-Official/C-Learning-Helper并推送main。
 ## 2026-11-07 仓库维护
 
 根目录 Agent 指令文件仅保存在本地，仓库协作入口为 [README.md](README.md)。
+## 2026-11-07 密码管理补齐（已部署验证）
+主 Agent 接管本人改密、管理员重置、前后端与权限测试。无数据库迁移；不改已有用户密码。
+
+- 完成：本人旧密码验证改密、管理员独立重置、复用密码强度与散列、事务提交后使目标账号全部 Session 失效。账号设置和编辑用户资料新增独立密码表单，重复新密码校验，成功清空表单。
+- 修改：PasswordController、PasswordSessions、UserManagementService、PasswordControllerTest、PasswordSecurityTest、PasswordForm.vue、SettingsView、UsersView；公共契约与本交接。无迁移。
+- 验证：后端 verify 193项记录，188通过/5环境跳过/0失败；前端42项通过及typecheck/build成功。首次全套测试现有评测超时测试受限环境失败，具备本机网络/进程访问后完整重跑通过。
+- 本机 HTTP 真接口：旧密码错误、弱密码、缺CSRF、学生越权重置均拒绝；本人改密后两个已有Session均401，旧密码不能登录，新密码成功；管理员重置后旧Session及旧密码失效，新密码成功，管理员自己的Session保留。独立合成账号 password-check-9d3ba39351 留作验收记录，随机密码未写入文档或日志；现有用户密码未变。
+- 部署：前端 dist 已构建，仅重启后端并复用数据库、评测与HTTP80。未做浏览器视觉操作验收；正式MariaDB/Rocky8仍待对应环境。
+
+## 2026-11-07 主 Agent：DeepSeek 配置恢复（完成）
+
+用户要求新增 `配置Deepseek.sh` 并配置新密钥；已新增脚本与Python实现、README入口和C模块交接说明。私有配置Git忽略、0600、不回显，当前后端已重启并确认DEEPSEEK/configured=true。官方模型列表认证及默认模型检查通过，未发起推理；临时目录检查原子保存、权限、错误输入保留旧配置与输出不含测试密钥均通过。无数据库迁移，不修改其他用户凭据。

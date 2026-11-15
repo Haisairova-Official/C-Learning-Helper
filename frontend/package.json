@@ -16,19 +16,20 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "vue": "3.5.45",
-    "vue-router": "4.6.3",
-    "element-plus": "2.13.3",
     "@element-plus/icons-vue": "2.3.2",
-    "monaco-editor": "0.57.0"
+    "element-plus": "2.13.3",
+    "monaco-editor": "0.57.0",
+    "vue": "3.5.45",
+    "vue-router": "4.6.3"
   },
   "devDependencies": {
-    "vite": "8.3.6",
+    "@types/node": "22.19.11",
     "@vitejs/plugin-vue": "6.0.10",
+    "happy-dom": "^21.0.4",
     "typescript": "5.9.3",
-    "vue-tsc": "3.3.14",
+    "vite": "8.3.6",
     "vitest": "4.1.12",
-    "@types/node": "22.19.11"
+    "vue-tsc": "3.3.14"
   },
   "overrides": {
     "dompurify": "3.4.17"

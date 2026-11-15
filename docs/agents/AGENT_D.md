@@ -143,3 +143,10 @@
 - 格式失败实际网页提交出现0分/格式状态/核对空白与末尾换行容错说明，截图.local/output-format.png。
 - 聊天头像真实PNG加载/32px渲染与无图首字回退通过，临时合成作者头像已恢复，无新聊天消息。截图.local/chat-avatars.png。
 - 最终前端34项测试与生产构建通过，详细结果分别见D/ASSIGNMENT_EDIT.md、D/CHAT_AVATARS.md及B/OUTPUT_FORMAT.md。
+
+## 2026-11-15 主 Agent：Tino解锁后选择修复（完成）
+
+用户反馈第四项出现但无法选择。设置页接入ReplyStylePicker，显式处理整卡选择、重复点击序列和键盘操作，移除旧radio样式；增加replyStylePicker.test.ts与happy-dom开发依赖。45项前端测试及构建通过，独立合成账号后端解锁/保存/读取TINO通过并恢复原风格。dist已更新，不改现有真实用户偏好，不调用付费AI。详见C/TINO.md本日交接；无接口或迁移变化。
+
+## 2026-11-15 回复风格点击即存（已更新）
+用户最终确认需要点击即存；SettingsView加入独立风格保存队列与切页前等待，保留昵称/简介手动保存。settingsTino.test.ts完整页面测试涵盖自动保存、重进页面、切页刷新、草稿隔离和失败重试；48项前端测试通过。实际浏览器已验证Tino选中后立即切页再回来仍保留。行为和此前手动“保存设置”规则的覆盖见C/TINO.md本日追加。

@@ -79,6 +79,45 @@ public final class JudgeEngine {
         return cleanupFailed && !outcome.systemError() ? error(problem, results, "JUDGE_CACHE_CLEANUP_FAILED") : outcome;
     }
 
+    /** Runs only student-owned source and input; never accepts an authorized private template. */
+    public record TrialResult(Verdict verdict, String stdout, String stderr, String compileMessage,
+                              Long timeMs, Long memoryKb) {}
+    public TrialResult trial(CompilationSource source, String input, Limits limits, String expected) {
+        if(source.hasPrivateTemplate()) throw new IllegalArgumentException("Trial source must be public");
+        var ids=new LinkedHashSet<String>();
+        TrialResult result;
+        try {
+            var compilation=transport.execute(GoJudgeRequests.compile(source));
+            ids.addAll(compilation.fileIds().values());
+            var verdict=compileVerdict(compilation);
+            if(verdict==Verdict.COMPILATION_ERROR) {
+                result=new TrialResult(verdict,"","",safeCompileDiagnostic(compilation.files().getOrDefault("stderr",""),source),null,null);
+            } else if(verdict!=Verdict.ACCEPTED) {
+                result=new TrialResult(Verdict.SYSTEM_ERROR,"","","",null,null);
+            } else {
+                var binary=compilation.fileIds().get("main");
+                GoJudgeRequests.requireFileId(binary);
+                var execution=transport.execute(GoJudgeRequests.run(binary,input,limits));
+                ids.addAll(execution.fileIds().values());
+                verdict=runtimeVerdict(execution);
+                if(verdict==Verdict.SYSTEM_ERROR || !execution.files().containsKey("stdout"))
+                    throw new JudgeTransportException("JUDGE_INVALID_TRIAL_OUTPUT");
+                String stdout=execution.files().getOrDefault("stdout","");
+                String stderr=execution.files().getOrDefault("stderr","");
+                if(verdict==Verdict.ACCEPTED && expected!=null)
+                    verdict=OutputComparator.compare(expected,stdout,ComparisonMode.EXACT);
+                result=new TrialResult(verdict,stdout,stderr,"",ceilUnit(execution.time(),1_000_000),ceilUnit(execution.memory(),1024));
+            }
+        } catch(JudgeTransportException | RuntimeException e) {
+            result=new TrialResult(Verdict.SYSTEM_ERROR,"","","",null,null);
+        }
+        for(String id:ids) {
+            try { GoJudgeRequests.requireFileId(id); transport.deleteCachedFile(id); }
+            catch(JudgeTransportException | RuntimeException e) { result=new TrialResult(Verdict.SYSTEM_ERROR,"","","",null,null); }
+        }
+        return result;
+    }
+
     private static Outcome error(ProblemSnapshot p, List<CaseResult> results, String code) {
         return new Outcome(Verdict.SYSTEM_ERROR, null, p.maxScore(), "", results, code);
     }

@@ -77,3 +77,12 @@
 - 下一步：由集成负责人完成第三轮全系统构建、V5/V6迁移与页面链路验收；目标环境到位后复用脚本验收。
 
 未勾选项涉及正式目标环境或超出本轮已证实范围。第一轮历史记录保留在 [PHASE1.md](../implementation/B/PHASE1.md)。
+
+## 2026-11-07 主 Agent：自主测试（已部署验证）
+用户要求自主输入输出测试；主Agent接管隔离编译运行、授权限流、临时结果和前端入口。函数题只拼接用户自备测试程序，不使用教师私有模板。不写成绩或正式提交。
+
+- 文件：JudgeEngine增加trial；TrialService、TrialController；TrialPanel、WorkspaceView；TrialEngineTest、TrialServiceTest、TrialSecurityTest；scripts/trial_demo.py与公共契约/决策。
+- 验证：后端verify206项记录，201通过/5环境跳过/0失败；前端42项通过，最终左下布局typecheck与build成功。真实HTTP覆盖C17/CPP17、PROGRAM/FUNCTION四种组合；自填stdin/实际stdout/stderr、可选预期输出、不一致、编译错误、无限循环超时；匿名/CSRF/他人结果/未授权版本/UTF8大小拒绝；正式提交与作业成绩前后完全一致。DeepSeek仍DEEPSEEK/configured=true，未调用AI推理。
+- scripts/trial_demo.py会创建并复用独立合成班级、2个学生、4道小题和作业；私有fixture位于backend/.local/trial-check.json（0600/Git忽略），不改现有学生密码。首次使用原演示student登录失败后改用独立合成账号，现有学生资料未改。
+- 最终位置按用户截图改为题目及样例下方“手动验证”面板，左栏独立卡片；右栏移除试运行页签与按钮。已构建dist，后端此前重启就绪，HTTP80复用。浏览器仅到登录页，未声称完成浏览器视觉验收。正式Rocky8/MariaDB待对应环境验证。
+- 限制：临时任务重启丢失，最多10分钟/100项；沿正式提交的开放截止时间权限；函数测试程序需自行编写；单实例并发限制。
