@@ -41,6 +41,17 @@ def save(path, text):
     tmp.replace(path)
 
 
+def rename_retry(source, target, attempts=60):
+    for attempt in range(attempts):
+        try:
+            source.rename(target)
+            return
+        except PermissionError:
+            if attempt == attempts - 1:
+                raise
+            time.sleep(0.5)
+
+
 def secure_directory():
     PRIVATE.mkdir(parents=True, exist_ok=True)
     identity = subprocess.check_output(['whoami.exe','/user','/fo','csv','/nh'], encoding='mbcs', errors='replace')
@@ -111,7 +122,7 @@ def tool(name, check):
         if name == 'gcc':
             subprocess.run(['icacls.exe', str(folder), '/grant:r', '*S-1-15-2-1:(OI)(CI)(RX)'],
                            check=True, stdout=subprocess.DEVNULL)
-        folder.rename(target)
+        rename_retry(folder, target)
     return exe
 
 
@@ -323,7 +334,7 @@ def instance():
                 "GRANT ALL ON c_assist.* TO 'c_assist'@'127.0.0.1';\n",encoding='utf-8')
             (stage/'initial-accounts.env').write_text(''.join('APP_DEMO_PASSWORD_'+name+'='+secrets.token_hex(12)+'\n'
                 for name in ('ADMIN','TEACHER','STUDENT','STUDENT2')),encoding='utf-8')
-            stage.rename(target)
+            rename_retry(stage, target)
     return target, json.loads((target/'settings.json').read_text(encoding='utf-8'))
 
 
