@@ -97,7 +97,8 @@ func (e *Environment) removeProfile() {
 func (e *Environment) nativeCommand(param *envexec.ExecveParam) (string, error) {
 	bin := os.Getenv("CASSIST_COMPILER_BIN")
 	system := os.Getenv("SystemRoot")
-	if !filepath.IsAbs(bin) || !filepath.IsAbs(system) {
+	localAppData := os.Getenv("LOCALAPPDATA")
+	if !filepath.IsAbs(bin) || !filepath.IsAbs(system) || !filepath.IsAbs(localAppData) {
 		return "", errors.New("missing native toolchain")
 	}
 	path := filepath.Join(system, "System32")
@@ -117,7 +118,7 @@ func (e *Environment) nativeCommand(param *envexec.ExecveParam) (string, error) 
 	default:
 		return "", errors.New("unsupported judge command")
 	}
-	param.Env = []string{"PATH=" + path, "SystemRoot=" + system, "WINDIR=" + system, "LC_ALL=C", "TMP=" + e.tmp, "TEMP=" + e.tmp}
+	param.Env = []string{"PATH=" + path, "SystemRoot=" + system, "WINDIR=" + system, "LC_ALL=C", "TMP=" + e.tmp, "TEMP=" + e.tmp, "LOCALAPPDATA=" + localAppData, "USERPROFILE=" + e.tmp}
 	return exe, nil
 }
 
