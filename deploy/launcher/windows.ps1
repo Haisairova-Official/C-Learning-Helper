@@ -27,7 +27,10 @@ try {
             }
             $unpacked = Join-Path $stage 'unpacked'
             Expand-Archive -LiteralPath $zip -DestinationPath $unpacked
-            [IO.Directory]::Move($unpacked, (Split-Path $python))
+            for ($i = 0; $i -lt 60; $i++) {
+                try { [IO.Directory]::Move($unpacked, (Split-Path $python)); break }
+                catch { if ($i -eq 59) { throw }; Start-Sleep -Milliseconds 500 }
+            }
         } finally { Remove-Item -LiteralPath $stage -Recurse -Force }
     }
     $env:PYTHONUTF8 = '1'
